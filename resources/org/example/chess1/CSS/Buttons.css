@@ -1,0 +1,50 @@
+#FastStartButton {
+    -fx-alignment: CENTER;
+    -fx-text-alignment: CENTER;
+    -fx-min-width: 197;
+    -fx-max-width: 197;
+    -fx-min-height: 125;
+    -fx-max-height: 125;
+    -fx-background-color: #50505060;
+    -fx-text-fill: white;
+    -fx-border-color: #ffffff80;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-font-size: 30px;
+    -fx-font-family: "Verdana";
+    -fx-wrap-text: true;
+}
+
+#FastStartButton:hover {
+    -fx-background-color: #ff770070;
+    -fx-text-fill: white;
+}
+
+#PieceButton {
+    -fx-background-color: #505050;
+    -fx-background-radius: 5;
+    -fx-border-color:white;
+    -fx-border-radius: 4;
+    -fx-border-size: 3;
+    -fx-border-insets: 0;
+}
+
+#PieceButton:hover {
+    -fx-border-color: #ff7700;
+
+}
+
+.button {
+    -fx-border-radius: 18;
+    -fx-border-width: 2;
+    -fx-background-color: #404040;
+    -fx-text-fill: #d5d5d5;
+    -fx-background-radius: 20;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.button:hover {
+    -fx-border-color: #ff7700;
+    -fx-text-fill: #ff7700;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chess1.Controllers.WaitingController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="294.0" prefHeight="107.0" prefWidth="600.0" style="-fx-background-color: linear-gradient(to bottom, transparent, #050505 91%);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="294.0" />
+      <ProgressIndicator layoutX="12.0" layoutY="343.0" prefHeight="45.0" prefWidth="37.0" style="-fx-progress-color: #ff7700;" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="552.0" AnchorPane.topAnchor="343.0" />
+      <Label fx:id="tipsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="343.0" prefHeight="45.0" prefWidth="463.0" text="Подсказка:" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="69.0" AnchorPane.rightAnchor="69.0" AnchorPane.topAnchor="343.0">
+         <font>
+            <Font name="Verdana" size="15.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageOne" fitHeight="401.0" fitWidth="600.0" layoutX="202.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <ImageView fx:id="imageTwo" fitHeight="401.0" fitWidth="600.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+#BoardBackGround {
+    -fx-background-color:
+    radial-gradient(center 50% 50%,
+    radius 240%,
+    #808080 10%,
+    #404040 30%);
+}
+
+#gameOverPane {
+    -fx-background-color:
+    radial-gradient(center 50% 50%,
+    radius 150%,
+    #808080 5%,
+    #404040 80%);
+}
+
+#registerPane {
+    -fx-background-color: linear-gradient(to bottom, #404040 20%, #555555);
+}
+
+#profilePane {
+    -fx-background-radius: 10;
+}
+
+#profilePane .label {
+    -fx-text-fill: black;
+}
+
+#profilePane:hover .label {
+    -fx-text-fill: white;
+}
+
+
+#menuUpPane {
+    -fx-background-color: #505050
+}
+
+#mainMenuPane {
+    -fx-background-color:
+        radial-gradient(center 50% 60%,
+        radius 100%,
+        #707070 2%,
+        #404040 70%);
+}
+
+#userProfile {
+    -fx-background-color: #404040;
+}
+
+#mainStatPain {
+    -fx-background-color: linear-gradient(to bottom, #404040 20%, #606060);
+}
+

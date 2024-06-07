@@ -1,0 +1,41 @@
+.tab-pane {
+    -fx-background-color: #404040;
+}
+
+
+.tab {
+    -fx-background-color: transparent;
+}
+
+.tab-label {
+    -fx-font-family: "Verdana";
+    -fx-font-size: 12;
+    -fx-text-fill: black;
+}
+
+.tab:selected {
+    -fx-selected-border-color: transparent;
+    -fx-background-color: linear-gradient(to bottom, transparent 95%, #ff7700 90%);
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #ff7700;
+}
+
+.tab-header-area {
+    -fx-alignment: center;
+    -fx-padding: 0 15;
+}
+
+.tab-header-background {
+    -fx-background-color: transparent;
+}
+
+.tab-header-area .tab-down-button {
+    -fx-opacity: 0;
+    visibility: hidden;
+}
+
+
+
+

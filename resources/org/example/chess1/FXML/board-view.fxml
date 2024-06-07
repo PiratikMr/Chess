@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="BoardBackGround" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../CSS/Panes.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chess1.Controllers.BoardController">
+   <children>
+      <AnchorPane fx:id="boardPane" layoutX="208.0" layoutY="46.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="656.0" prefWidth="656.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="208.0" AnchorPane.rightAnchor="416.0" AnchorPane.topAnchor="46.0">
+         <children>
+            <ImageView fitHeight="656.0" fitWidth="656.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="882.0" layoutY="150.0" prefHeight="288.0" prefWidth="353.0" style="-fx-background-color: #404040;" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="882.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="150.0">
+         <children>
+            <AnchorPane fx:id="gameOverPane" prefHeight="211.0" prefWidth="353.0" stylesheets="@../CSS/Panes.css" visible="false" AnchorPane.bottomAnchor="124.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+               <children>
+                  <Label fx:id="gameOverScoreLabel" alignment="CENTER" layoutX="129.0" layoutY="14.0" prefHeight="26.0" prefWidth="93.0" text="1-0" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana" size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gameOverInfoLabel" alignment="CENTER" layoutX="6.0" layoutY="52.0" prefHeight="50.0" prefWidth="338.0" text="Мат - Победа черных" textAlignment="CENTER" textFill="#77ff77" wrapText="true">
+                     <font>
+                        <Font name="Verdana Bold Italic" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="buttRevengeRequest" layoutX="30.4" layoutY="198.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="295.0" stylesheets="@../CSS/Buttons.css" text="РЕВАНШ" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="28.0">
+                     <font>
+                        <Font name="Verdana" size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="353.0" spacing="1.0" stylesheets="@../CSS/History.css" AnchorPane.bottomAnchor="84.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button id="PlayerButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onButtRotateBoardClicked" prefHeight="30.0" prefWidth="30.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../UI/swap.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button id="PlayerButton" fx:id="buttMoveToStart" disable="true" mnemonicParsing="false" onAction="#onButtMoveToStartClicked" prefHeight="34.0" prefWidth="59.0" text="&lt;&lt;" textAlignment="CENTER" />
+                  <Button id="PlayerButton" fx:id="buttMoveBack" disable="true" mnemonicParsing="false" onAction="#onButtMoveBackClicked" prefHeight="34.0" prefWidth="59.0" text="&lt;" textAlignment="CENTER" />
+                  <Button id="PlayerButton" fx:id="buttMoveForward" disable="true" mnemonicParsing="false" onAction="#onButtMoveForwardClicked" prefHeight="34.0" prefWidth="59.0" text="&gt;" textAlignment="CENTER" />
+                  <Button id="PlayerButton" fx:id="buttMoveToFinish" disable="true" mnemonicParsing="false" onAction="#onButtMoveToFinishClicked" prefHeight="34.0" prefWidth="59.0" text="&gt;&gt;" textAlignment="CENTER" />
+               </children>
+            </HBox>
+            <AnchorPane fx:id="historyPain" prefHeight="251.0" prefWidth="353.0" AnchorPane.bottomAnchor="124.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="84.0">
+               <children>
+                  <ScrollPane id="ScrollPane" fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: #404040;" stylesheets="@../CSS/History.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <content>
+                        <AnchorPane id="Pane" fx:id="historyScrollPane" cache="true" prefHeight="208.8" prefWidth="354.0" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <Label fx:id="nameEnemyLabel" layoutX="86.0" layoutY="21.0" prefHeight="40.0" prefWidth="260.0" text="Соперник 1" textFill="WHITE" AnchorPane.bottomAnchor="359.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="21.0">
+               <font>
+                  <Font name="Fira Code Regular" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="namePlayerLabel" layoutX="87.0" layoutY="359.0" prefHeight="40.0" prefWidth="272.0" text="Соперник 1" textFill="WHITE" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="359.0">
+               <font>
+                  <Font name="Fira Code Regular" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="enemyAvatarImageView" fitHeight="50.0" fitWidth="50.0" layoutX="17.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="17.0" />
+            <ImageView fx:id="playerAvatarImageView" fitHeight="50.0" fitWidth="50.0" layoutX="17.0" layoutY="353.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="17.0" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="timeEnemyLabel" alignment="CENTER" layoutX="882.0" layoutY="92.0" prefHeight="58.0" prefWidth="130.0" style="-fx-background-color: white;" text="00:00">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="timePlayerLabel" alignment="CENTER" layoutX="882.0" layoutY="570.0" prefHeight="58.0" prefWidth="130.0" style="-fx-background-color: white;" text="00:00">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Label fx:id="actionEnemyLabel" alignment="TOP_LEFT" layoutX="1017.0" layoutY="125.0" prefHeight="25.0" prefWidth="161.0" text="Ожидание соперника" textFill="WHITE" visible="false" AnchorPane.leftAnchor="1017.0">
+         <font>
+            <Font name="Fira Code Regular" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="actionPlayerLabel" alignment="BOTTOM_LEFT" layoutX="1015.0" layoutY="570.0" prefHeight="25.0" prefWidth="127.0" text="Ваш ход" textFill="WHITE" visible="false" AnchorPane.leftAnchor="1017.0">
+         <font>
+            <Font name="Fira Code Regular" size="13.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="882.0" layoutY="628.0" prefHeight="35.0" prefWidth="378.0" AnchorPane.bottomAnchor="57.0" AnchorPane.leftAnchor="882.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <HBox fx:id="hBoxPlayersTakenPieces" alignment="CENTER_LEFT" fillHeight="false" prefHeight="71.0" prefWidth="353.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="882.0" layoutY="57.0" prefHeight="35.0" prefWidth="353.0" AnchorPane.leftAnchor="882.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="57.0">
+         <children>
+            <HBox fx:id="hBoxEnemiesTakenPieces" alignment="CENTER_LEFT" fillHeight="false" layoutY="1.0" prefHeight="40.0" prefWidth="353.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="1.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="58.0" fitWidth="168.0" layoutX="7.0" layoutY="26.0" onMouseClicked="#onExitClicked" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="7.0" AnchorPane.topAnchor="26.0">
+         <image>
+            <Image url="@../logo.png" />
+         </image></ImageView>
+      <MenuBar layoutX="25.0" layoutY="14.0" style="-fx-background-color: #606060;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Файл">
+            <items>
+              <MenuItem fx:id="buttSaveGame" mnemonicParsing="false" onAction="#onButtSaveGameClicked" text="Сохранить игру" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

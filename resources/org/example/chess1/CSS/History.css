@@ -1,0 +1,52 @@
+#HistoryButton {
+    -fx-pref-width: 155;
+    -fx-pref-height: 30;
+    -fx-background-radius: 0;
+    -fx-background-color: #606060;
+    -fx-border-insets: 0;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+}
+
+#HistoryButton:hover {
+    -fx-border-color: transparent;
+    -fx-background-color: #ff7700;
+    -fx-text-fill: white;
+}
+
+#PlayerButton {
+    -fx-text-fill: white;
+    -fx-border-insets: 0;
+    -fx-background-radius: 0;
+    -fx-background-color: #505050;
+    -fx-border-color: white;
+}
+
+#PlayerButton:disabled {
+    -fx-border-color: transparent;
+    -fx-background-color: #404040;
+}
+
+#PlayerButton:hover {
+    -fx-border-color: transparent;
+    -fx-background-color: #ff7700;
+}
+
+
+.label {
+    -fx-alignment: CENTER;
+    -fx-pref-width: 35;
+    -fx-pref-height: 30;
+    -fx-text-fill: black;
+    -fx-background-color: #707070;
+}
+
+#Pane {
+    -fx-background-color:
+        radial-gradient(center 50% 50%,
+        radius 290%,
+        #707070 10%,
+        #404040 40%);
+}
+
+

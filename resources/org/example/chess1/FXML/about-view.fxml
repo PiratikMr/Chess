@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="mainMenuPane" prefHeight="310.0" prefWidth="378.0" stylesheets="@../CSS/Panes.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chess1.Controllers.AboutController">
+   <children>
+      <Label alignment="CENTER" layoutX="112.0" layoutY="14.0" prefHeight="28.0" prefWidth="153.0" text="Игра &quot;Шахматы&quot;" textFill="#ff7700">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="56.0" layoutY="42.0" prefHeight="28.0" prefWidth="276.0" text="Расчетно-Графическое Задание" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="56.0" layoutY="81.0" prefHeight="84.0" prefWidth="276.0" text="Выполнил студент II курса, группы АВТ-241 Хицков Александр" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="deenNorris" fitHeight="102.0" fitWidth="175.0" layoutX="106.0" layoutY="158.0" onMouseEntered="#onGifMouseEntered" onMouseExited="#onGifMouseExited" pickOnBounds="true">
+         <image>
+            <Image url="@../DeanNorris1.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="mainGifView" fitHeight="102.0" fitWidth="175.0" layoutX="106.0" layoutY="158.0" onMouseEntered="#onGifMouseEntered" onMouseExited="#onGifMouseExited" pickOnBounds="true">
+         <image>
+            <Image url="@../image_861606181131305804568.gif" />
+         </image>
+      </ImageView>
+      <Button layoutX="137.0" layoutY="269.0" mnemonicParsing="false" onAction="#onExitClicked" prefHeight="26.0" prefWidth="114.0" stylesheets="@../CSS/Buttons.css" text="В Главное Меню"/>
+   </children>
+</AnchorPane>

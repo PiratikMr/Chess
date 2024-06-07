@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="mainMenuPane" prefHeight="199.0" prefWidth="346.0" stylesheets="@../CSS/Panes.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chess1.Controllers.SetAddressController">
+   <children>
+      <GridPane layoutX="33.0" layoutY="14.0" prefHeight="109.0" prefWidth="281.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="31.0" minHeight="10.0" percentHeight="50.0" prefHeight="31.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="29.0" minHeight="10.0" percentHeight="50.0" prefHeight="29.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="29.0" minHeight="10.0" percentHeight="50.0" prefHeight="30.0" valignment="BOTTOM" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="29.0" minHeight="10.0" percentHeight="50.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="addressTextField" alignment="CENTER" prefHeight="15.0" prefWidth="281.0" promptText="xxx.xxx.xxx.xxx" style="-fx-background-color: #404040; -fx-text-fill: #ff7700;" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label text="Адресс Сервера" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="15.0" />
+               </font>
+            </Label>
+            <Label text="Порты" textFill="WHITE" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Verdana" size="15.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+               <children>
+                  <TextField fx:id="portFromTextField" alignment="CENTER" prefHeight="25.0" prefWidth="83.0" promptText="####" style="-fx-background-color: #404040; -fx-text-fill: #ff7700;" />
+                  <Label alignment="CENTER" prefHeight="30.0" prefWidth="73.0" text="-" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="portToTextField" alignment="CENTER" prefHeight="25.0" prefWidth="83.0" promptText="####" style="-fx-background-color: #404040; -fx-text-fill: #ff7700;" />
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+      <Button layoutX="125.0" layoutY="142.0" mnemonicParsing="false" onAction="#onButtOkClicked" prefHeight="37.0" prefWidth="97.0" stylesheets="@../CSS/Buttons.css" text="Готово" />
+   </children>
+</AnchorPane>

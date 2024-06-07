@@ -1,0 +1,8 @@
+#sortButton {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+
+#sortButton:hover {
+    -fx-background-color: #ff7700;
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<AnchorPane id="mainMenuPane" prefHeight="135.0" prefWidth="433.0" stylesheets="@../CSS/Panes.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chess1.Controllers.PieceChooserController">
+   <children>
+      <HBox alignment="CENTER" layoutX="14.0" layoutY="22.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" stylesheets="@../CSS/Buttons.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="PieceButton" mnemonicParsing="false" onAction="#onButtQueenClicked" prefHeight="80.0" prefWidth="80.0">
+               <graphic>
+                  <ImageView fx:id="imageQueen" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Pieces/QueenWhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="PieceButton" mnemonicParsing="false" onAction="#onButtRockClicked" prefHeight="80.0" prefWidth="80.0">
+               <graphic>
+                  <ImageView fx:id="imageRock" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Pieces/RockWhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="PieceButton" mnemonicParsing="false" onAction="#onButtBishopClicked" prefHeight="80.0" prefWidth="80.0">
+               <graphic>
+                  <ImageView fx:id="imageBishop" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Pieces/BishopWhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="PieceButton" mnemonicParsing="false" onAction="#onButtKnightClicked" prefHeight="80.0" prefWidth="80.0">
+               <graphic>
+                  <ImageView fx:id="imageKnight" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Pieces/KnightWhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
